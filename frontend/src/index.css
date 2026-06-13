@@ -1,0 +1,59 @@
+:root {
+  --bg-main: #0b1120;
+  --nav-bg: #151e32;
+  --card-bg: #111827;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --accent-blue: #3b82f6;
+  --accent-blue-hover: #2563eb;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* --- RESPONSIVE NAVBAR LAYOUT --- */
+.navbar {
+  width: 100%;
+  background: var(--nav-bg);
+  padding: 16px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  font-size: 0.95rem;
+}
+
+/* When the screen is smaller than 600px (Mobile Phones) */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;      /* Stacks items vertically */
+    justify-content: center;     /* Centers everything */
+    gap: 20px;                   /* Adds space between title and links */
+  }
+  
+  .navbar h1 {
+    text-align: center;          /* Centers the text perfectly */
+    width: 100%;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-between; /* Spreads the 3 links out perfectly */
+    gap: 10px;
+  }
+}
